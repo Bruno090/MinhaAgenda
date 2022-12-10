@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MinhaAgenda.View.Listagem"
+             Title="Meus Compromissos ">
+
+    <!--<ContentPage.ToolbarItems>
+        <ToolbarItem Text="Novo Agendamento" Clicked="ToolbarItem_Clicked"/>
+    </ContentPage.ToolbarItems>-->
+
+    <ContentPage.Content>
+        <StackLayout>
+            <SearchBar x:Name="txt_search" 
+                       Margin="-10,0,0,0"
+                       Placeholder="Buscar de Cliente"
+                       TextChanged="txt_search_TextChanged" />
+            <RefreshView x:Name="ref_carregando" IsRefreshing="False"
+                         Refreshing="lst_produtos_Refreshing">
+                <ListView x:Name="lst_agenda" ItemSelected="lst_agenda_ItemSelected">
+                    <ListView.Header>
+                        <Grid RowDefinitions="Auto"
+                          ColumnDefinitions="*,*,*,*,*">
+                            <Label Grid.Row="0" Grid.Column="0" Text="Data"/>
+                            <Label Grid.Row="0" Grid.Column="1" Text="Hora"/>
+                            <Label Grid.Row="0" Grid.Column="2" Text="Cliente"/>
+                            <Label Grid.Row="0" Grid.Column="3" Text="Preco"/>
+                            <Label Grid.Row="0" Grid.Column="4" Text="Endereço"/>
+                        </Grid>
+                    </ListView.Header>
+
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <ViewCell.ContextActions>
+                                    <MenuItem Text="Remover" Clicked="MenuItem_Clicked_remover"/>
+                                </ViewCell.ContextActions>
+                                <Grid ColumnDefinitions="*,Auto" RowDefinitions="Auto">
+                                    <Label Grid.Row="0" Grid.Column="0" Text="{Binding Horario, StringFormat='{}{0:MM/dd/yyyy}'} "/>
+                                    <Label Grid.Row="0" Grid.Column="1" Text="{Binding Horario,StringFormat='{0:hh:mm}'}"/>
+                                    <Label Grid.Row="0" Grid.Column="2" Text="{Binding Cliente}"/>
+                                    <Label Grid.Row="0" Grid.Column="3" Text="{Binding Preco, StringFormat='{}{O:c}'}"/>
+                                    <Label Grid.Row="0" Grid.Column="4" Text="{Binding Endereco}"/>
+                                </Grid>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </RefreshView>
+        </StackLayout>
+    </ContentPage.Content>
+
+
+
+</ContentPage>

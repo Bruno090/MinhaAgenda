@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MinhaAgenda.View.Inicial"
+             BackgroundColor="#A12E57">
+    <ContentPage.Resources>
+        <Style TargetType="Button">
+            <Setter Property="BackgroundColor">
+                <Setter.Value>
+                    <Color>
+                        <x:Arguments>
+                            <x:Double>.9</x:Double>
+                            <x:Double>.9</x:Double>
+                            <x:Double>.9</x:Double>
+                            <x:Double>.3</x:Double>
+                        </x:Arguments>
+                    </Color>
+
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </ContentPage.Resources>
+
+
+    <ContentPage.Content>
+        <StackLayout>
+            
+                <Label Text="Bem Vindo à minha Agenda" FontSize="50" FontAttributes="bold"
+                VerticalOptions="CenterAndExpand" HorizontalTextAlignment="Center" Margin="0,-27,0,0"
+                HorizontalOptions="Center"/>
+
+            <Button Text="Login" CornerRadius="20"
+                TextColor="White"
+                HeightRequest="40"
+                WidthRequest="160"
+                HorizontalOptions="CenterAndExpand"
+                Clicked="Button_Clicked_Login"          
+                BorderColor="#1a1a1a"
+                BorderWidth="1"
+                Margin="10">
+            </Button>
+
+            <Button Text="Registro" CornerRadius="20"
+                TextColor="#E4E4E4"
+                HeightRequest="40"
+                WidthRequest="160"
+                HorizontalOptions="CenterAndExpand"
+                Clicked="Button_Clicked_Registro"       
+                BorderColor="#1a1a1a"
+                BorderWidth="1"
+                Margin="30">
+            </Button>
+            
+            <!--<Button Text="Login" BackgroundColor="#355c7d" FontAttributes="Bold" TextColor="Wheat" 
+                    Margin="10" CornerRadius="230" /> -->
+           <!-- <Button Text="Registrar" BackgroundColor="#355c7d" FontAttributes="Bold" TextColor="Wheat" 
+                    Margin="10" CornerRadius="230"/> -->
+
+
+
+        </StackLayout>
+
+      
+
+
+    </ContentPage.Content>
+</ContentPage>

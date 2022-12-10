@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MinhaAgenda.View.Agendamento"
+             xmlns:system="clr-namespace:System;assembly=mscorlib"
+             Title="Agendamento">
+            
+    
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Salvar" Clicked="ToolbarItem_Clicked"/>
+    </ContentPage.ToolbarItems>
+    
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Data"/>
+            <DatePicker x:Name="Data_agenda" MinimumDate="{x:Static system:DateTime.Today}" 
+                        Date="{Binding Horario}"/>
+            <Label Text="Hora"/>
+            <TimePicker x:Name="Hora_agendada" Time="{Binding Horario }" />
+            
+            <Label Text="Cliente"/>
+            <Entry x:Name="txt_cliente" Text="{Binding Cliente}"/>
+
+            <Label Text="Preco"/>
+            <Entry x:Name="txt_preco" Text="{Binding Preco}" Keyboard="Numeric"/>
+
+            <Label Text="Endereco"/>
+            <Entry x:Name="txt_endereco" Text="{Binding Endereco}"/>
+            
+            
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
