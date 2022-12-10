@@ -5,13 +5,14 @@
 
     <MasterDetailPage.Master>
         <ContentPage Title="Menu">
+
+            
             <StackLayout BackgroundColor="#A12E57">
-                <Line Stroke="red" X2="10" Y1="110291"/>
-                <Button  BackgroundColor="#A12E57" Text="Dashboard" Clicked="Button_Clicked" />
-                <Button  BackgroundColor="#A12E57" Text="Novo Agendamento" Clicked="Button_Clicked_agendamento"/>
-                <Button  BackgroundColor="#A12E57" Text="Cliente" Clicked="Button_Clicked_2"/>
-                <Button  BackgroundColor="#A12E57" Text="Produto/Serviço" Clicked="Button_Clicked_3"/>
-                <Button  BackgroundColor="#A12E57" Text="Financeiro" Clicked="Button_Clicked_4"/>
+                <Button  BackgroundColor="#A12E57" Text="Dashboard"         TextColor="#FFFF"   Clicked="Button_Clicked" />
+                <Button  BackgroundColor="#A12E57" Text="Novo Agendamento"  TextColor="#FFFF"   Clicked="Button_Clicked_agendamento"/>
+                <Button  BackgroundColor="#A12E57" Text="Cliente"           TextColor="#FFFF"   Clicked="Button_Clicked_2"/>
+                <Button  BackgroundColor="#A12E57" Text="Produto/Serviço"   TextColor="#FFFF"   Clicked="Button_Clicked_3"/>
+                <Button  BackgroundColor="#A12E57" Text="Financeiro"        TextColor="#FFFF"   Clicked="Button_Clicked_4"/>
             </StackLayout>
         </ContentPage>
     </MasterDetailPage.Master>

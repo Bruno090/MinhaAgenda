@@ -2,7 +2,24 @@
 <Application xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MinhaAgenda.App">
+    
     <Application.Resources>
-        
+        <Style TargetType="NavigationPage">
+            <Setter Property="BackgroundColor" Value="#E4E4E4"/>
+            <Setter Property="Padding" Value="0"/>
+            <Setter Property="NavigationPage.BarBackgroundColor" Value="#A12E57"/>
+        </Style>
+
+
+        <Style TargetType="Frame">
+            <Setter Property="Margin" Value="0"/>
+            <Setter Property="BackgroundColor" Value="#FFFF"/>
+            <Setter Property="HasShadow" Value="True"/>
+            <Setter Property="CornerRadius" Value="10"/>
+            <Setter Property="Padding" Value="10"/>
+            <Setter Property="Margin" Value="0,0,0,0"/>
+        </Style>
+
+
     </Application.Resources>
 </Application>

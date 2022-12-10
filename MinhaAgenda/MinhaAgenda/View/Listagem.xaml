@@ -8,45 +8,58 @@
         <ToolbarItem Text="Novo Agendamento" Clicked="ToolbarItem_Clicked"/>
     </ContentPage.ToolbarItems>-->
 
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style TargetType="ListView">
+                <Setter Property="Margin" Value="5"/>
+                <Setter Property="SeparatorVisibility" Value="Default"/>
+                <Setter Property="SeparatorColor" Value="#D66FB0"/>
+                <Setter Property="Margin" Value=" 10,15,15,15"/>
+
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
     <ContentPage.Content>
-        <StackLayout>
-            <SearchBar x:Name="txt_search" 
+        <Frame >
+            <StackLayout>
+                <SearchBar x:Name="txt_search" 
                        Margin="-10,0,0,0"
                        Placeholder="Buscar de Cliente"
                        TextChanged="txt_search_TextChanged" />
-            <RefreshView x:Name="ref_carregando" IsRefreshing="False"
+                <RefreshView x:Name="ref_carregando" IsRefreshing="False"
                          Refreshing="lst_produtos_Refreshing">
-                <ListView x:Name="lst_agenda" ItemSelected="lst_agenda_ItemSelected">
-                    <ListView.Header>
-                        <Grid RowDefinitions="Auto"
+                    <ListView x:Name="lst_agenda" SeparatorVisibility="Default" SeparatorColor="#D66FB0" ItemSelected="lst_agenda_ItemSelected">
+                        <ListView.Header>
+                            <Grid RowDefinitions="Auto"
                           ColumnDefinitions="*,*,*,*,*">
-                            <Label Grid.Row="0" Grid.Column="0" Text="Data"/>
-                            <Label Grid.Row="0" Grid.Column="1" Text="Hora"/>
-                            <Label Grid.Row="0" Grid.Column="2" Text="Cliente"/>
-                            <Label Grid.Row="0" Grid.Column="3" Text="Preco"/>
-                            <Label Grid.Row="0" Grid.Column="4" Text="Endereço"/>
-                        </Grid>
-                    </ListView.Header>
+                                <Label Grid.Row="0" Grid.Column="0" Text="Data"/>
+                                <Label Grid.Row="0" Grid.Column="1" Text="Hora"/>
+                                <Label Grid.Row="0" Grid.Column="2" Text="Cliente"/>
+                                <Label Grid.Row="0" Grid.Column="3" Text="Preco"/>
+                                <Label Grid.Row="0" Grid.Column="4" Text="Endereço"/>
+                            </Grid>
+                        </ListView.Header>
 
-                    <ListView.ItemTemplate>
-                        <DataTemplate>
-                            <ViewCell>
-                                <ViewCell.ContextActions>
-                                    <MenuItem Text="Remover" Clicked="MenuItem_Clicked_remover"/>
-                                </ViewCell.ContextActions>
-                                <Grid ColumnDefinitions="*,Auto" RowDefinitions="Auto">
-                                    <Label Grid.Row="0" Grid.Column="0" Text="{Binding Horario, StringFormat='{}{0:MM/dd/yyyy}'} "/>
-                                    <Label Grid.Row="0" Grid.Column="1" Text="{Binding Horario,StringFormat='{0:hh:mm}'}"/>
-                                    <Label Grid.Row="0" Grid.Column="2" Text="{Binding Cliente}"/>
-                                    <Label Grid.Row="0" Grid.Column="3" Text="{Binding Preco, StringFormat='{}{O:c}'}"/>
-                                    <Label Grid.Row="0" Grid.Column="4" Text="{Binding Endereco}"/>
-                                </Grid>
-                            </ViewCell>
-                        </DataTemplate>
-                    </ListView.ItemTemplate>
-                </ListView>
-            </RefreshView>
-        </StackLayout>
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <ViewCell>
+                                    <ViewCell.ContextActions>
+                                        <MenuItem Text="Remover" Clicked="MenuItem_Clicked_remover"/>
+                                    </ViewCell.ContextActions>
+                                    <Grid ColumnDefinitions="*,Auto" RowDefinitions="Auto">
+                                        <Label Grid.Row="0" Grid.Column="0" Text="{Binding Horario, StringFormat='{}{0:MM/dd/yyyy}'} "/>
+                                        <Label Grid.Row="0" Grid.Column="1" Text="{Binding Horario,StringFormat='{0:hh:mm}'}"/>
+                                        <Label Grid.Row="0" Grid.Column="2" Text="{Binding Cliente}"/>
+                                        <Label Grid.Row="0" Grid.Column="3" Text="{Binding Preco, StringFormat='{}{O:c}'}"/>
+                                        <Label Grid.Row="0" Grid.Column="4" Text="{Binding Endereco}"/>
+                                    </Grid>
+                                </ViewCell>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
+                </RefreshView>
+            </StackLayout>
+        </Frame>
     </ContentPage.Content>
 
 
