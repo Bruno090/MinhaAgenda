@@ -31,7 +31,7 @@
                     <ListView x:Name="lst_agenda" SeparatorVisibility="Default" SeparatorColor="#D66FB0" ItemSelected="lst_agenda_ItemSelected">
                         <ListView.Header>
                             <Grid RowDefinitions="Auto"
-                          ColumnDefinitions="*,*,*,*,*">
+                          ColumnDefinitions="80,*,*,*,*">
                                 <Label Grid.Row="0" Grid.Column="0" Text="Data"/>
                                 <Label Grid.Row="0" Grid.Column="1" Text="Hora"/>
                                 <Label Grid.Row="0" Grid.Column="2" Text="Cliente"/>
@@ -46,9 +46,9 @@
                                     <ViewCell.ContextActions>
                                         <MenuItem Text="Remover" Clicked="MenuItem_Clicked_remover"/>
                                     </ViewCell.ContextActions>
-                                    <Grid ColumnDefinitions="*,Auto" RowDefinitions="Auto">
+                                    <Grid ColumnDefinitions="80,*,*,*,*" RowDefinitions="Auto">
                                         <Label Grid.Row="0" Grid.Column="0" Text="{Binding Horario, StringFormat='{}{0:MM/dd/yyyy}'} "/>
-                                        <Label Grid.Row="0" Grid.Column="1" Text="{Binding Horario,StringFormat='{0:hh:mm}'}"/>
+                                        <Label Grid.Row="0" Grid.Column="1" Text="{Binding Horario,StringFormat='{0:HH:mm}'}"/>
                                         <Label Grid.Row="0" Grid.Column="2" Text="{Binding Cliente}"/>
                                         <Label Grid.Row="0" Grid.Column="3" Text="{Binding Preco, StringFormat='{}{O:c}'}"/>
                                         <Label Grid.Row="0" Grid.Column="4" Text="{Binding Endereco}"/>

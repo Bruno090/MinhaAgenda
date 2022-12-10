@@ -5,7 +5,7 @@
     
     <Application.Resources>
         <Style TargetType="NavigationPage">
-            <Setter Property="BackgroundColor" Value="#E4E4E4"/>
+            <Setter Property="BackgroundColor" Value="#a12e57"/>
             <Setter Property="Padding" Value="0"/>
             <Setter Property="NavigationPage.BarBackgroundColor" Value="#A12E57"/>
         </Style>
@@ -17,7 +17,7 @@
             <Setter Property="HasShadow" Value="True"/>
             <Setter Property="CornerRadius" Value="10"/>
             <Setter Property="Padding" Value="10"/>
-            <Setter Property="Margin" Value="0,0,0,0"/>
+            <Setter Property="Margin" Value="15,15,15,0"/>
         </Style>
 
 
